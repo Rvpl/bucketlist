@@ -2,6 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap">
     <link rel="icon" href="{{ asset('img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     {% block css %}{% endblock %}
@@ -13,16 +15,23 @@
 </head>
 <body>
 <header>
-    <h1>
-        <a href="{{ path('main_index') }}">
-            <img src="{{ asset('img/logo.png') }}" alt="logo">
-        </a>
-    </h1>
-    <nav>
+    <div class="container">
+        <h1 class="header-logo">
+            <a href="{{ path('main_index') }}">
+                <img src="{{ asset('img/logo.png') }}" alt="logo">
+                Bucket List
+            </a>
+        </h1>
+    </div>
+    <nav class="header-nav">
         <a href="{{ path('main_index') }}">Home</a>
     </nav>
 </header>
-{% block body %}{% endblock %}
+<main>
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+</main>
 {% include 'fragments/_footer.html.twig' %}
 </body>
 </html>
