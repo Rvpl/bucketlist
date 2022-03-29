@@ -38,10 +38,19 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
+    padding: 0 10px;
 }
 
 .header-nav {
     display: flex;
+}
+
+.header-nav a {
+    margin-right: 2rem;
+}
+
+main h2 {
+    margin-top: 0;
 }
 
 main {
