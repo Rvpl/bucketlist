@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ asset('img/favicon.png') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    {% block css %}{% endblock %}
+    <title>
+        {% block title %}
+            Bucket List
+        {% endblock %}
+    </title>
+</head>
+<body>
+<header>
+    <h1>
+        <a href="{{ path('main_index') }}">
+            <img src="{{ asset('img/logo.png') }}" alt="logo">
+        </a>
+    </h1>
+    <nav>
+        <a href="{{ path('main_index') }}">Home</a>
+    </nav>
+</header>
+{% block body %}{% endblock %}
+{% include 'fragments/_footer.html.twig' %}
+</body>
+</html>
