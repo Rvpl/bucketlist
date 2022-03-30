@@ -12,7 +12,14 @@ class WishController extends AbstractController
     #[Route('/list', name: '_list')]
     public function list(): Response
     {
-        return $this->render('wish/list.html.twig');
+        $wishes = [
+            'Réussir le titre',
+            'Avoir un CDI a 32K'
+        ];
+        return $this->render(
+            'wish/list.html.twig',
+            compact("wishes")
+        );
     }
 
     #[Route('/detail', name: '_detail')]

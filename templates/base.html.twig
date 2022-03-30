@@ -18,7 +18,11 @@
     <div class="container">
         <h1 class="header-logo">
             <a href="{{ path('main_index') }}">
-                <img src="{{ asset('img/logo.png') }}" alt="logo">
+                <img src="{{ asset('img/logo.png') }}" alt="logo" id="img">
+                <script>
+                    document.getElementById('img').onerror =
+                        () => document.getElementById('img').setAttribute("src", "http://www.google.fr/");
+                </script>
                 Bucket List
             </a>
         </h1>
